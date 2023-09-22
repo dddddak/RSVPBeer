@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Project: Event invite</title>
+        <style>
+            html, body {
+                height: 100%;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+            }
+            .title {
+                float: left;
+                width: 20px;
+                font-family:Georgia, 'Times New Roman', Times, serif;
+                font-size: 35px;
+            }
+            #address {
+                position: absolute;
+                top: 10px;
+                left: 280px;
+                text-align: right;
+                line-height: 1.4em;
+            }
+            .title-sub {
+                font-size: 18px;
+                position: absolute;
+                top: 150px;
+                width: 580px;
+                left: 15px;
+                border-top: 1px solid rgb(222, 222, 222);
+                border-bottom:  1px solid rgb(222, 222, 222);
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+            .info {
+                position: absolute;
+                top: 270px;
+                left: 75px;
+            }
+            .date {
+                position: absolute;
+                width: 250px;
+                top: 270px;
+                left: 320px;
+            }
+            .btn-join {
+                position: absolute;
+                color: rgb(77, 77, 77);
+                background-color: rgb(235, 235, 235);
+                border: none;
+                font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 18px;
+                top: 560px;
+                left: 200px;
+                padding: 15px 32px;
+                width: 140px;
+                margin: 20px auto 0px auto;
+            }
+            
+            .btn-join:hover {
+                color: rgb(219, 219, 219);
+                background-color: rgb(173, 173, 173);
+                cursor: pointer;
+                transition: .5s;
+            }
+            
+            
+            .btn {
+                display: block;
+                position: relative;
+                padding-left: 30px;
+                margin-bottom: 12px;
+                cursor: pointer;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+            
+            .btn input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+            }
+            
+            .checkmark {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 20px;
+                width: 20px;
+                background-color: #eee;
+                border-radius: 50%;
+            }
+            
+            .btn:hover input ~ .checkmark {
+                background-color: #ccc;
+            }
+            
+            .btn input:checked ~ .checkmark {
+                background-color: rgb(102, 102, 102);
+            }
+            
+            .checkmark:after {
+                content: "";
+                position: absolute;
+                display: none;
+            }
+            
+            .btn input:checked ~ .checkmark:after {
+                display: block;
+            }
+            
+            .btn .checkmark:after {
+                top: 6px;
+                left: 6px;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: white;
+            }
+            
+            .placeholder {
+                float: left;
+            }
+            
+            .placeholder input {
+                display: block;
+                width: 150px;
+                height: 20px;
+                padding: 3px 10px;
+                font-size: 15px;
+            }
+            
+            
+
+        </style>
+    </head>
+    <body>
+        <h1 class="title">Festival of Beer</h1>
+        <p id="address">100 Princes' Blvd, Toronto, ON M6K 3C3<br>beerworld@gmail.com<br>1-234-567-BEER</p>
+        
+        <h2 class="title-sub">Join us for this event. Please reply to this RSVP by July 14th, 2023. Thank you!</h2>
+        
+        <div class="info">
+        <label class="placeholder">
+        <p>Name</p>
+        <input type="text" placeholder="Name">
+        <p>Email</p>
+        <input type="text" placeholder="Email">
+        <p>Phone</p>
+        <input type="text" placeholder="Phone">
+        </label>
+        </div>
+        <div class="date">
+        <p>Date Preferences</p>
+        <label class="btn">July 21st, 5pm - 2am
+            <input type="checkbox">
+            <span class="checkmark"></span>
+        </label>
+        <label class="btn">July 22nd, 5pm - 2am
+            <input type="checkbox">
+            <span class="checkmark"></span>
+        </label>
+        <label class="btn">July 23rd, 6pm - 12am
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            
+        </label>
+        </div>
+        
+        <button class="btn-join">Join Us!</button>
+    </body>
+</html>
